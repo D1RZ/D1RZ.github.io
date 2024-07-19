@@ -55,7 +55,7 @@ famImages[2] = "images/liren.png";
 
 descriptiontexts[0] = '<p>Name: <b>Magnus Carlsen</b></p> <p>Age: 33</p> <p>Ranked No 1 in the world</p> <p>ELO: 2832</p> <p>Famous Quote</p> <p><i>"Without the element of enjoyment, it is not worth trying to excel at anything"</i></p>';
 
-descriptiontexts[1] = '<p>Name: <b>Anand</b></p> <p>Age: 54</p> <p>Ranked No 11 in the world</p> <p>ELO: 2751</p> <p>Famous Quote</p> <p><i>"Chess is like a language."</i></p>';
+descriptiontexts[1] = '<p>Name: <b>Anand</b></p> <p>Age: 54</p> <p>Ranked No 11 in the world</p> <p>ELO: 2751</p> <p>Famous Quote</p> <p><i>"Chess is like a language.It is very beautiful once you have played for a while."</i></p>';
 
 descriptiontexts[2] = '<p>Name: <b>Ding Liren</b> </p> <p>Age: 31</p> <p>Ranked No 13 in the world</p> <p>ELO: 2745</p> <p>Famous Quote</p> <p><i>"The meaning of life is in those sparkling moments"<i></p>';
 

@@ -325,6 +325,11 @@ height:100vh;
     order:2;
 }
 
+#page1 .img-box
+{
+    height:400px;
+}
+
 #page2 .img-box
 {
     width:25%;
