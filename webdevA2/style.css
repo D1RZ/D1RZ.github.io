@@ -224,22 +224,6 @@ nav ul p
     cursor 0.4s step-end infinite alternate;
 }
 
-@keyframes cursor
-{
-    50%
-    {
-        border-color:transparent;
-    }
-}
-
-@keyframes typing
-{
-    from
-    {
-        width:0%;
-    }
-}
-
 .content
 {
     height:auto;
@@ -657,6 +641,25 @@ height:100vh;
     flex-direction:column;
 }
 
+@media screen and (min-width:901px) /* animation only plays on screen width of more than 901 px */
+{
+    @keyframes cursor
+{
+    50%
+    {
+        border-color:transparent;
+    }
+}
+
+@keyframes typing
+{
+    from
+    {
+        width:0%;
+    }
+}
+}
+
 @media screen and (max-width:900px)
 {
 nav
@@ -719,7 +722,9 @@ nav ul{display:none;width:100%;} /*hide the menu item list*/
 }
 .intro-txt :first-child
 {
-    font-size:10px;
+    font-size:20px;
+    border-right:0px;
+    white-space:normal;
 }
 .chessboard
 {
@@ -747,7 +752,6 @@ nav ul{display:none;width:100%;} /*hide the menu item list*/
     width:300px;
     height:300px;
 }
-
 }
 
 
