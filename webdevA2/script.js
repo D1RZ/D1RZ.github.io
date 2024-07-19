@@ -42,16 +42,24 @@ show(4);
 );
 
 /* animation and changing of images of famous chess players */
+const body = document.querySelector("body");
 var txtbox = document.querySelector(".text-box");
 const leftarrow = document.querySelector("#leftarrow");
 const rightarrow = document.querySelector("#rightarrow");
 var famImages = [];
+var famMobileImages = [];
 var descriptiontexts = [];
 var i = 0;
 
 famImages[0] = "images/carlsen.png";
 famImages[1] = "images/anand.png";
 famImages[2] = "images/liren.png";
+
+famMobileImages[0] = "images/carlsen-mobile.png";
+
+famMobileImages[1] = "images/anand-mobile.png";
+
+famMobileImages[2] = "images/liren-mobile.png";
 
 descriptiontexts[0] = '<p>Name: <b>Magnus Carlsen</b></p> <p>Age: 33</p> <p>Ranked No 1 in the world</p> <p>ELO: 2832</p> <p>Famous Quote</p> <p><i>"Without the element of enjoyment, it is not worth trying to excel at anything"</i></p>';
 
@@ -83,13 +91,27 @@ leftarrow.addEventListener("click",function()
     if(i > 0 && i < famImages.length) /* make sure that the user cannot go behind first image */
     {
     i--;
-    famImg.src = famImages[i];
+    if(body.clientWidth > 900)
+    {
+      famImg.src = famImages[i];
+    }
+    else
+    {
+      famImg.src = famMobileImages[i];
+    }
     descriptiontxtbox.innerHTML = descriptiontexts[i];
     }
     else
     {
         i += 2; /* backtrack to last image if user press left arrow when they are at first image */
+      if(body.clientWidth > 900)
+      {
         famImg.src = famImages[i];
+      }
+      else
+      {
+        famImg.src = famMobileImages[i];
+      }
         descriptiontxtbox.innerHTML = descriptiontexts[i];
     }
     /* readd fade in class to trigger animation again */
@@ -122,13 +144,27 @@ rightarrow.addEventListener("click",function()
     if(i < famImages.length - 1)
     {
     i++;
+    if(window.innerWidth > 900)
+    {
     famImg.src = famImages[i];
+    }
+    else
+    {
+      famImg.src = famMobileImages[i];
+    }
     descriptiontxtbox.innerHTML = descriptiontexts[i];
     }
     else /* reset back to first image */
     {
     i = 0;
+    if(window.innerWidth > 900)
+    {
     famImg.src = famImages[i];
+    }
+    else
+    {
+      famImg.src = famMobileImages[i];
+    }
     descriptiontxtbox.innerHTML = descriptiontexts[i];
     }
     /* readd fade in class to trigger animation again */
@@ -977,4 +1013,3 @@ function moveToFirstRankHFile(startingSquareId,pieceColor)
       return;
   }
  }
-

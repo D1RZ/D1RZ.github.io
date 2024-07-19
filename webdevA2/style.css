@@ -261,6 +261,12 @@ nav ul p
 height:100vh;
 }
 
+#page1 .img-box img
+{
+    width:400px;
+    height:400px;
+}
+
 .title-box
 {
     width:100%;
@@ -323,11 +329,6 @@ height:100vh;
     align-items:center;
     flex-direction:column;
     order:2;
-}
-
-#page1 .img-box
-{
-    height:400px;
 }
 
 #page2 .img-box
@@ -738,6 +739,12 @@ nav ul{display:none;width:100%;} /*hide the menu item list*/
 #page3 .text-box > .text-box
 {
     width:100%;
+}
+
+#page1 .img-box img
+{
+    width:300px;
+    height:300px;
 }
 
 }
