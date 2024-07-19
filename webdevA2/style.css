@@ -566,11 +566,13 @@ height:100vh;
 .whiteText
 {
     color:#ebecd0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .blackText
 {
     color:#739552;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .fadein
@@ -744,6 +746,16 @@ nav ul{display:none;width:100%;} /*hide the menu item list*/
 {
     width:300px;
     height:300px;
+}
+.whiteText
+{
+    font-size: 9px;
+    margin-top:3.2px;
+}
+.blackText
+{
+    font-size: 9px;
+    margin-top:3px;
 }
 }
 
