@@ -285,7 +285,6 @@ height:100vh;
     align-items:center;
     flex-wrap:wrap;
     margin-top:30px;
-    background-color: red;
 }
 
 #page2 .text-box
@@ -490,11 +489,14 @@ height:100vh;
 #page3 .content
 {
     row-gap:50px;
+    background-color:black;
 }
 
-#page3 .text-box:nth-child(3) .text-box
+#page3 .text-box > .text-box
 {
     width:50%;
+    flex-direction:column;
+    row-gap:40px;
 }
 
 .description-txt
@@ -537,11 +539,18 @@ height:100vh;
     flex-wrap:wrap;
 }
 
+#chessboard1
+{
+    width:250px;
+    height:250px;
+    display:flex;
+    flex-wrap:wrap;
+}
+
 .square
 {
     width:12.5%;
     height:12.5%;
-    float:left;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -637,6 +646,11 @@ height:100vh;
     height:auto;
 }
 
+.flex-direction-change
+{
+    flex-direction:column;
+}
+
 @media screen and (max-width:900px)
 {
 nav
@@ -715,6 +729,12 @@ nav ul{display:none;width:100%;} /*hide the menu item list*/
     top:-5%;
     left:82%;
 }
+
+#page3 .text-box > .text-box
+{
+    width:100%;
+}
+
 }
 
 

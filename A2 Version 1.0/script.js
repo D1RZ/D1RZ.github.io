@@ -522,7 +522,7 @@ rookBtns.forEach((rookbtn) => {
     });
  });
 
- show(1); // by default it shows the first page
+ show(3); // by default it shows the first page
 
  /* chessboard */
 let legalSquares = [];
