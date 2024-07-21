@@ -11,6 +11,11 @@
     src: url(fonts/Poppins/Poppins-Regular.ttf);
 }
 
+iframe
+{
+    border:0px;
+}
+
 body
 {
     width:100%;

@@ -43,7 +43,6 @@ show(4);
 
 /* animation and changing of images of famous chess players */
 const body = document.querySelector("body");
-var txtbox = document.querySelector(".text-box");
 const leftarrow = document.querySelector("#leftarrow");
 const rightarrow = document.querySelector("#rightarrow");
 var famImages = [];
@@ -173,11 +172,6 @@ rightarrow.addEventListener("click",function()
 }
 );
 
-/* animation for hamburger menu icon */
-var barwidth = 60; /* width of the hamburger icon */
-var barheight = 8; /* height of the hamburger icon */
-var hamburgergap = 6; /* gap between each of the lines in the hamburger icon */
-
 const menuItemsList=document.querySelector("nav ul");
 
 const hamBtn = document.querySelector("#hamIcon");
@@ -197,7 +191,6 @@ const horseBtns = document.querySelectorAll(".horse");
 const bishopBtns = document.querySelectorAll(".bishop");
 const queenBtn = document.querySelector("#queen");
 const kingBtn = document.querySelector("#king");
-var bishopBtn = document.querySelector("#bishop");
 const rookBtns = document.querySelectorAll(".rook"); 
 
 var piecedescriptions = [];
@@ -219,6 +212,7 @@ piecedescriptions[5] = '<p><b>King</b></p> <img src = "images/king.png" alt = "i
 hidehistorytxtbox();
 function hidehistorytxtbox()
 {
+    var historytxtbox = document.querySelector("#historytxtbox"); /* txt box that appears after clicking of button */
     historytxtbox.style.display = "none";
 }
 
@@ -558,7 +552,7 @@ rookBtns.forEach((rookbtn) => {
     });
  });
 
- show(3); // by default it shows the first page
+ show(1); // by default it shows the first page
 
  /* chessboard */
 let legalSquares = [];
@@ -581,7 +575,7 @@ function setUpBoardSquares()
     let row = 8 - Math.floor(i/8);
     let column = String.fromCharCode(97+(i%8));
     let square = boardSquares[i];
-    boardSquares[i].id = column + row;
+    square.id = column + row;
   }
 }
 
