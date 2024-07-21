@@ -812,6 +812,10 @@ nav ul{display:none;width:100%;} /*hide the menu item list*/
 {
     width:100%;
 }
+#qr-Container
+{
+    display:none;
+}
 .coordinate
 {
     top:65%;

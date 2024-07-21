@@ -553,7 +553,7 @@ rookBtns.forEach((rookbtn) => {
  });
 
 
- show(4); // by default it shows the first page
+ show(1); // by default it shows the first page
 
 /* handles logic for html form */
 
