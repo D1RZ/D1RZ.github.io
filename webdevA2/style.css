@@ -16,6 +16,38 @@ iframe
     border:0px;
 }
 
+form
+{
+    color:black;
+    margin-top:-90px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+}
+
+label
+{
+    font-size:35px;
+    font-family:PoppinsRegular;
+}
+
+input
+{
+    text-align:center;
+    font-size:25px;
+}
+
+button
+{
+    font-size:35px;
+    background-color:#e1b46d;
+    color:black;
+    border-radius:2.5%;
+    border:none;
+    width:30%;
+    height:20%;
+}
+
 body
 {
     width:100%;
@@ -494,6 +526,32 @@ height:100vh;
     row-gap:40px;
 }
 
+#page3 .content .text-box:nth-child(10) /* background color for quiz/form box */
+{
+    background-color:#ffe4c4;
+    height:400px;
+    width:80%;
+    border-radius:1%;
+}
+
+#page3 .content .text-box:nth-child(10) .text-box 
+{
+    width:90%;
+    height:90%;
+    margin-top:-2px;
+    color:black;
+}
+
+#FormPage p
+{
+    color:red;
+}
+
+#Backend .img-box
+{
+    width:100%;
+}
+
 .description-txt
 {
     height:100%;
@@ -532,6 +590,7 @@ height:100vh;
     margin:0 auto;
     display:flex;
     flex-wrap:wrap;
+    background-color:red;
 }
 
 
@@ -578,6 +637,11 @@ height:100vh;
 {
     color:#739552;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#SorryMsg
+{
+    display:none;
 }
 
 .fadein
@@ -660,7 +724,7 @@ height:100vh;
 }
 }
 
-@media screen and (max-width:900px)
+@media screen and (max-width:900px) /* fits better in my opinion */
 {
 nav
 {
@@ -726,10 +790,17 @@ nav ul{display:none;width:100%;} /*hide the menu item list*/
     border-right:0px;
     white-space:normal;
 }
-.chessboard
+.chessboard /* make chessboard 'disappear' */
 {
-    width:300px;
-    height:300px;
+    display:none;
+}
+#SorryMsg
+{
+    display:block;
+}
+#SorryMsg .img-box
+{
+    width:100%;
 }
 .coordinate
 {
@@ -762,7 +833,27 @@ nav ul{display:none;width:100%;} /*hide the menu item list*/
     font-size: 9px;
     margin-top:3px;
 }
+label
+{
+    font-size:23px;
 }
+input
+{
+    width:100%;
+}
+button
+{
+    font-size:25px;
+    height:20%;
+    width:80%;
+}
+#page3 .content .text-box:nth-child(10)
+{ 
+    height:500px;
+}
+}
+  
+
 
 
 

@@ -42,7 +42,7 @@ show(4);
 );
 
 /* animation and changing of images of famous chess players */
-const body = document.querySelector("body");
+const body = document.querySelector("body"); /* this is very useful for checking viewport width */
 const leftarrow = document.querySelector("#leftarrow");
 const rightarrow = document.querySelector("#rightarrow");
 var famImages = [];
@@ -552,7 +552,57 @@ rookBtns.forEach((rookbtn) => {
     });
  });
 
- show(1); // by default it shows the first page
+
+ show(4); // by default it shows the first page
+
+/* handles logic for html form */
+
+const QuizContainer = document.querySelector("#QuizContainer");
+const FormPage = document.querySelector("#FormPage");
+const form = document.querySelector("form");
+var answer = document.querySelector("form input");
+const submitBtn = document.querySelector("#HideFormBtn");
+const backendPage = document.querySelector("#Backend"); 
+const errortxt = document.querySelector("#FormPage p");
+
+hideBackend();
+function hideBackend()
+{
+  backendPage.style.display = "none";
+}
+
+submitBtn.addEventListener("click",hideForm);
+
+function hideForm()
+{
+  if(answer.value == "Queen" || answer.value == "queen")
+  {
+   FormPage.style.display = "none"; /* hide the form page */
+   
+   if(body.clientWidth < 480) /* resize Quiz Container in mobile to accomodate for text */
+   {
+     QuizContainer.style.height = "880px";
+   }
+
+   backendPage.style.display = "block"; /* show backendPage */
+   
+  }
+  else
+  {
+    showError();
+  }
+}
+
+function showError() 
+{
+  errortxt.innerHTML = 'Wrong Answer!';
+  setTimeout(hideError,500);
+}
+
+function hideError() 
+{
+  errortxt.innerHTML = '';
+}
 
  /* chessboard */
 let legalSquares = [];
@@ -560,6 +610,7 @@ let isWhiteTurn = true;
 const boardSquares = document.getElementsByClassName("square");
 const pieces = document.getElementsByClassName("piece");
 const piecesImages = document.querySelectorAll(".piece img");
+const chessboard = document.querySelector(".chessboard");
 
 setUpBoardSquares();
 setUpPieces();
