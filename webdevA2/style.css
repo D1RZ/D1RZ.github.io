@@ -715,6 +715,12 @@ height:100vh;
     flex-direction:column;
 }
 
+#fullscreenToggle
+{
+   position:relative;
+   left:35%;
+}
+
 @media screen and (min-width:901px) /* animation only plays on screen width of more than 901 px */
 {
     @keyframes cursor
