@@ -542,6 +542,11 @@ height:100vh;
     color:black;
 }
 
+#page4 .title-box
+{
+    background-color:black;
+}
+
 #FormPage p
 {
     color:red;
@@ -642,6 +647,11 @@ height:100vh;
 #SorryMsg
 {
     display:none;
+}
+
+#qr-Container
+{
+    flex-direction:column;
 }
 
 .fadein
