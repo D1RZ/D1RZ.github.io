@@ -1,3 +1,7 @@
+/* audio */
+const audio = new Audio();
+audio.src = "audio/buttonpress.mp3";
+
 /* toggle fullscreen */
 const fullscreenBtn = document.querySelector("#fullscreenToggle");
 
@@ -27,6 +31,7 @@ function enterFullscreen() {
 
   fullscreenBtn.addEventListener("click",function()
   {
+    audio.play();
     if (document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement) {
       exitFullscreen();
     } else {
@@ -610,6 +615,7 @@ submitBtn.addEventListener("click",hideForm);
 
 function hideForm()
 {
+  audio.play();
   if(answer.value == "Queen" || answer.value == "queen")
   {
    FormPage.style.display = "none"; /* hide the form page */
@@ -652,7 +658,6 @@ setUpPieces();
 
 function setUpBoardSquares()
 {
-  console.log(boardSquares.length);
   for(let i = 0; i < boardSquares.length; i++)
   {
     /* makes all board squares to be drop zones */
