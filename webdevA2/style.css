@@ -871,6 +871,10 @@ button
 { 
     height:500px;
 }
+#fullscreenToggle
+{
+    display:none;
+}
 }
   
 
